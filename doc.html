@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Search Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .back-to-home {
+            color: #4a9e9e;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .back-to-home img {
+            width: 20px;
+            margin-right: 5px;
+        }
+        .search-bar {
+            display: flex;
+            gap: 10px;
+        }
+        .search-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            width: 300px;
+        }
+        .filter-dropdown {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            background-color: white;
+        }
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .doctor-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .doctor-info {
+            margin-bottom: 10px;
+        }
+        .doctor-qualification {
+            background-color: #b5d8d8;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .book-button {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .doctor-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            float: right;
+        }
+        .medibot-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .medibot-text {
+            background-color: #d0e8d0;
+            font-size: 30px;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-to-home">
+            <span class="home-icon">⌂</span>
+            Back to home 
+        </a>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="search doctor">
+            <select class="filter-dropdown">
+                <option>Filter by Hospitals</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="doctor-grid">
+        <div class="doctor-card">
+            <img src="6323.jpg" alt="Dr. R.K Jindal" class="doctor-image">
+            <div class="doctor-info">
+                <h2>Dr. R.K Jindal</h2>
+                <p>Anxiety Disorders specialist | Fortis Noida</p>
+            </div>
+            <div class="doctor-qualification">
+                MBBS and M.D. in Paediatrics and Child Health<br>
+                Experience - 20 yrs
+            </div>
+            <button class="book-button">BOOK AN APPOINTMENT</button>
+        </div>
+
+        <div class="doctor-card">
+            <img src="anshika.png" alt="Dr. Anshika Rao" class="doctor-image">
+            <div class="doctor-info">
+                <h2>Dr. Anshika Rao</h2>
+                <p>Neurologist | MAX hospital</p>
+            </div>
+            <div class="doctor-qualification">
+                MBBS and M.D. in neurology <br>
+                Experience - 20 yrs
+            </div>
+            <button class="book-button">BOOK AN APPOINTMENT</button>
+        </div>
+
+        <div class="doctor-card">
+            <img src="kanishka.png" alt="Dr. Kanishka Banswal" class="doctor-image">
+            <div class="doctor-info">
+                <h2>Dr. Kanishka Banswal</h2>
+                <p>Gynecologist | Apollo</p>
+            </div>
+            <div class="doctor-qualification">
+                MBBS and PG (MD/MS in OBGYN)<br>
+                Experience - 20 yrs
+            </div>
+            <button class="book-button">BOOK AN APPOINTMENT</button>
+        </div>
+
+        <div class="doctor-card">
+            <img src="aman.jpeg" alt="Dr. Aman Meena" class="doctor-image">
+            <div class="doctor-info">
+                <h2>Dr. Aman Meena</h2>
+                <p>ENT | Park hospital</p>
+            </div>
+            <div class="doctor-qualification">
+                MBBS and Master of surgery in ENT<br>
+                Experience - 20 yrs
+            </div>
+            <button class="book-button">BOOK AN APPOINTMENT</button>
+        </div>
+    </div>
+
+    <div class="medibot-section">
+        <p class="medibot-text">Get personalised Doctor recommendation after getting assessed by our MediBot</p>
+    </div>
+</body>
+</html>

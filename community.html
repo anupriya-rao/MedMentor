@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        :root {
+            --primary-color: #68b88d;
+            --primary-hover: #4a907a;
+            --text-color: #4a5568;
+            --overlay-color: rgba(255, 255, 255, 0.95);
+        }
+
+        body {
+            background-color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .background-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+
+        .background-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: url(./communitybg.jpeg) center/cover no-repeat;
+        }
+
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                135deg,
+                var(--overlay-color) 0%,
+                rgba(255, 255, 255, 0.85) 100%
+            );
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary-color);
+            gap: 0.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--primary-hover);
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 2rem 0;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .button {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            padding: 0 1rem;
+        }
+
+        .decorative-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .coffee-cup {
+            width: 40px;
+            height: 40px;
+            background-color: #b97d60;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0.8;
+        }
+
+        .coffee-cup:nth-child(1) {
+            top: 10%;
+            right: 15%;
+        }
+
+        .coffee-cup:nth-child(2) {
+            bottom: 20%;
+            left: 10%;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button {
+                width: 80%;
+                max-width: 300px;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-wrapper">
+        <div class="background-image"></div>
+        <div class="background-overlay"></div>
+    </div>
+
+    <div class="container">
+        <nav class="nav">
+            <a href="index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 12l6-6m-6 6l6 6"/>
+                </svg>
+                Back to home
+            </a>
+        </nav>
+
+        <main class="main-content">
+            <h1>Find your community</h1>
+            
+            <div class="buttons-container">
+                <button class="button">Join a community</button>
+                <button class="button">Make a community</button>
+            </div>
+
+            <p class="description">
+                Welcome to the Community Section! Here, you can connect with individuals 
+                who share similar experiences and challenges. This space is designed for 
+                support, sharing advice, and fostering friendships. Join discussions, 
+                participate in groups, and find resources tailored to your needs. Together, we 
+                can create a supportive environment where everyone feels understood and 
+                empowered. Start connecting today!
+            </p>
+        </main>
+
+        <div class="decorative-elements">
+            <div class="coffee-cup"></div>
+            <div class="coffee-cup"></div>
+        </div>
+    </div>
+</body>
+</html>
